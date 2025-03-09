@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="name">name</div>
+    <div class="name">namwwwwe</div>
     <el-button>按钮</el-button>
     <el-input></el-input>
     <el-form>
