@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
     <router-view/>
   </div>
 </template>
-
+<script>
+export default {
+  created() {
+    // window.document.documentElement.setAttribute("data-theme", 'green');
+    // window.getName();
+  },
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

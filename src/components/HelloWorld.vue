@@ -1,47 +1,80 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div>
+    <div>
+      <div id="chart" style="width: 600px; height: 400px;"></div>
+    </div>
   </div>
 </template>
 
 <script>
+import Child from './Child.vue';
+import Vue from 'vue';
+import * as echarts from "echarts";
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+    name: "HelloWorld",
+    components: { Child },
+    props: {
+        msg: String
+    },
+    data() {
+      return {
+        name: 'zs',
+        age: '22',
+        obj: null,
+        arr: [1,2],
+
+        div2: true,
+        div1: true,
+        data:[],
+
+      }
+    },
+    mounted() {
+
+    },
+    methods: {
+      open() {
+        window.open('http://localhost:8080/#/liveData');
+      },
+        watchName() {
+          const unwatch = this.$watch(
+              'formData',
+              () => {
+                console.log('数据发生了变化')
+              },
+              {
+                deep: true
+              }
+          )
+        },
+        echoHello() {
+          sessionStorage.setItem('key', '3333')
+        }
+    },
 }
 </script>
-
+<!--<style lang="css" src="@/assets/css/test.css" scoped></style>-->
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.hello {
+  margin: 50px;
+  padding: 30px;
+  width: 100%;
+  height: 230px;
+  border: 1px solid red;
+  background: #42b983;
+}
+.color1 {
+  background: black;
+}
+/*.name {
+  color: $color;
+  @extend .color1;
+}
+.name1 {
+  @extend .name;
+  width: 200px;
+}*/
 h3 {
   margin: 40px 0 0;
 }
@@ -55,5 +88,10 @@ li {
 }
 a {
   color: #42b983;
+}
+.div1 {
+  width: 200px;
+  height:200px;
+  border: 1px solid red;
 }
 </style>
