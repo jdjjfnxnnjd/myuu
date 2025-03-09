@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-dialog
-        title="新增"
+        title="新增1"
         :visible.sync="dialogVisible"
         width="30%"
         :before-close="handleClose">
