@@ -1,0 +1,15 @@
+/*$color: red;
+::v-deep .el-button {
+  background: red;
+}*/
+.active {
+  border-bottom: 2px solid;
+}
+[data-theme=blue] .active {
+  color: blue;
+}
+[data-theme=green] .active {
+  color: green;
+}
+
+/*# sourceMappingURL=style.css.map */
