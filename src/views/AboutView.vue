@@ -11,7 +11,7 @@ export default {
     return {}
   },
   mounted() {
-    console.log(111)
+    console.log(2222)
     import(/* webpackChunkName: "common" */ '../components/common.vue');
     import(/* webpackChunkName: "hello1" */ '../assets/css/hello1.css')
   },
