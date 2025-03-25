@@ -18,7 +18,6 @@ Vue.use(ElementUI)
 import '@/assets/js/rem.js'
 import '@/assets/css/hello.scss'
 import overClose from '@/assets/js/overClose.js';
-//    "ol": "7.3.0",
 Vue.use(overClose);
 new Vue({
   router,
