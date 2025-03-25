@@ -1,4 +1,4 @@
-<template>
+f<template>
   <div class="about">
     <h1 class="hello name">This is an about page</h1>
   </div>
@@ -11,7 +11,7 @@ export default {
     return {}
   },
   mounted() {
-    console.log(2222)
+    console.log(23134134)
     import(/* webpackChunkName: "common" */ '../components/common.vue');
     import(/* webpackChunkName: "hello1" */ '../assets/css/hello1.css')
   },
