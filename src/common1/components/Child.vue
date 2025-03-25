@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="name">name22222222222</div>
-    <el-button>按钮</el-button>
+    <el-button>wwwww</el-button>
     <el-input></el-input>
     <el-form>
       <el-form-item label="姓名">
